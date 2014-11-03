@@ -1,0 +1,7 @@
+BUFFER: tRNA Buffer (1 L)
+
+[FINAL]		CHEMICAL	[STOCK]		QUANTITY
+10 mM		Tris, pH 7.4	1 M		10 ml
+90 mM		KCl		74.55 g/mol	6.71 g
+5.5 mM		MgAc		1 M		5.5 ml
+0.5 mM		EDTA, pH 8.0	0.5 M		1 ml

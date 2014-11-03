@@ -1,0 +1,8 @@
+create timer using Timer class
+use map data structure to create login database (read username/password pair from file?)
+
+BufferGUI extends RecipeGUI? no? xD
+
+export prj file as txt
+
+use method instead of new classes for creating GUI components;

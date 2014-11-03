@@ -1,0 +1,20 @@
+Buffer: MF Buffer (1.0 L)
+
+[FINAL]		CHEMICAL	[STOCK]		QUANTITY
+20.0 mM		Tris 7.4	1.0 M		20.00 ml
+500.0 mM	KCl		74.55 g/mol	37.28 g
+20.0 mM		Imidazole	4.0 M		5.00 ml
+10.0 %		Glycerol	100 %		100.00 g
+2.0 mM		BME		14.3 M		0.14 ml
+
+
+Buffer: MF Buffer (1.0 L)
+
+[FINAL]		CHEMICAL	[STOCK]		QUANTITY
+20.0 mM		Tris 7.4	1.0 M		20.00 ml
+500.0 mM	KCl		74.55 g/mol	37.28 g
+20.0 mM		Imidazole	4.0 M		5.00 ml
+10.0 %		Glycerol	100 %		100.00 g
+2.0 mM		BME		14.3 M		0.14 ml
+
+

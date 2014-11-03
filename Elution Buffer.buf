@@ -1,0 +1,8 @@
+BUFFER: Elution Buffer (500 ml)
+
+[FINAL]		CHEMICAL	[STOCK]		QUANTITY
+20 mM		Tris, pH 7.4	1 M		10 ml
+500 mM		KCl		74.55 g/mol	18.64 g
+500 mM		Imidazole	4 M		62.5 ml
+10 %		Glycerol	100 %		50 ml
+2 mM		BME		14.3 M		0.07 ml

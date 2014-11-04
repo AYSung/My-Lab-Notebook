@@ -6,3 +6,5 @@ BufferGUI extends RecipeGUI? no? xD
 export prj file as txt
 
 use method instead of new classes for creating GUI components;
+
+just checking to see if this syncs across computers. fingers crossed.

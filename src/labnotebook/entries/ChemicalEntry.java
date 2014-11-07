@@ -15,4 +15,42 @@ public abstract class ChemicalEntry {
 	}
 	
 	public abstract ArrayList<String> getProperties();
+	
+	protected abstract class Quantity{
+		private double quantity;
+		private String unit;
+		
+		public Quantity(){
+			
+		}
+		
+		protected double getConc(){
+			return quantity;
+		}
+		
+		protected void setConc(double quantity){
+			this.quantity = quantity;
+		}
+		
+		protected String getUnit(){
+			return this.unit;
+		}
+		
+		protected void setUnit(String unit){
+			this.unit = unit;
+		}
+		
+		protected abstract double standardizeUnit(Quantity q);
+	}
+	
+	public class SQuant extends Quantity{
+		
+		public SQuant(){
+			super();
+		}
+		protected double standardizeUnit(Quantity q){
+			double d = 0;
+			return d;
+		}
+	}
 }

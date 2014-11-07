@@ -5,6 +5,7 @@ import java.util.*;
 public abstract class ChemicalEntry {
 	protected String name, sUnit, fUnit, qUnit;
 	protected double sConc, fConc, quant;
+	protected Quantity sQuant, fQuant, unkQuant;
 	protected boolean wet;
 	
 	public ChemicalEntry(){
@@ -12,11 +13,42 @@ public abstract class ChemicalEntry {
 		sUnit = new String();
 		fUnit = new String();
 		qUnit = new String();
+		
+		sQuant = new Quantity(){
+			protected double standardizeUnit(Quantity q){
+				double standardQuant;
+				switch (q.getUnit()){
+					case "M":		standardQuant = q.getQuant() * 1000; 	
+									break;
+					case "mM":		standardQuant = q.getQuant();
+									break;
+					case "g/mol":	standardQuant = q.getQuant();	
+					default:		standardQuant = 0;
+				}
+				return standardQuant;
+			}
+		};
+		
+		fQuant = new Quantity(){
+			protected double standardizeUnit(Quantity q){
+				double standardQuant;
+				switch (q.getUnit()){
+					case "M":		standardQuant = q.getQuant() * 1000; 	
+									break;
+					case "mM":		standardQuant = q.getQuant();
+									break;
+					case "%":		standardQuant = q.getQuant();	
+					default:		standardQuant = 0;
+				}
+				return standardQuant;
+			}
+		};
+		
 	}
 	
 	public abstract ArrayList<String> getProperties();
 	
-	protected abstract class Quantity{
+	protected class Quantity{
 		private double quantity;
 		private String unit;
 		
@@ -24,11 +56,11 @@ public abstract class ChemicalEntry {
 			
 		}
 		
-		protected double getConc(){
+		protected double getQuant(){
 			return quantity;
 		}
 		
-		protected void setConc(double quantity){
+		protected void setQuant(double quantity){
 			this.quantity = quantity;
 		}
 		
@@ -40,17 +72,9 @@ public abstract class ChemicalEntry {
 			this.unit = unit;
 		}
 		
-		protected abstract double standardizeUnit(Quantity q);
-	}
-	
-	public class SQuant extends Quantity{
-		
-		public SQuant(){
-			super();
-		}
 		protected double standardizeUnit(Quantity q){
-			double d = 0;
-			return d;
+			double standardQuant = q.getQuant();
+			return standardQuant;
 		}
 	}
 }
